@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07150f">
+<title>Birthday Champion — A Surprise for My Brother</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="hitAudio" src="assets/bat-hit.mp3" preload="auto"></audio>
+<main>
+<section class="screen active" id="challenge">
+  <div class="stadium-lights"></div><div class="pitch"></div>
+  <div class="eyebrow">THE BIRTHDAY PREMIER LEAGUE • GRAND FINAL</div>
+  <h1>ONE BALL.<br><em>ONE SIX.</em></h1>
+  <p class="lead">Last ball of the match. Six runs needed. Can you finish like a champion?</p>
+  <div class="scoreboard final-score">
+    <div><small>RUNS NEEDED</small><strong>6</strong></div><div><small>BALLS LEFT</small><strong id="balls">1</strong></div><div><small>YOUR SCORE</small><strong id="runs">0</strong></div>
+  </div>
+  <div class="cricket-scene" id="cricketScene" role="button" tabindex="0" aria-label="Tap to hit the final ball">
+    <div class="crowd">🏟️ 🏟️ 🏟️ 🏟️ 🏟️</div><div class="bowler">🏃</div><div class="stumps">▥</div><div class="batter" id="batter">🏏</div><div class="cricket-ball" id="cricketBall">🔴</div>
+    <div class="six-flash hidden" id="sixFlash">SIIIIIIXXXX! 💥</div>
+  </div>
+  <div class="commentary" id="commentary">The bowler is running in… TAP TO PLAY THE FINAL BALL!</div>
+  <button class="primary bat" id="hitBtn">HIT THE LAST BALL 🏏</button>
+  <p class="small">Tap anywhere on the cricket field or press the button.</p>
+  <div id="unlock" class="unlock hidden"><div class="trophy">🏆</div><h2>WHAT A FINISH!</h2><p>YOU HIT A SIX! The trophy is yours. Your birthday surprise is waiting!</p><button class="primary" id="enterBtn">🏆 OPEN YOUR PRIZE</button></div>
+</section>
+
+<section class="screen slide" id="welcome">
+  <div class="tag">A SPECIAL DAY FOR A SPECIAL BROTHER</div><div class="ornament">✦ ✦ ✦</div>
+  <h1>Happy Birthday,<br><em class="name">My Brother!</em></h1>
+  <p class="lead">Today, the spotlight belongs to you.</p>
+  <div class="hero-badge">BROTHERHOOD • MEMORIES • DUAS</div>
+  <button class="primary next">Let’s celebrate →</button>
+</section>
+
+<section class="screen slide" id="dua">
+  <div class="tag">A PRAYER FROM THE HEART</div><h2>Youm-e-Wiladat Mubarak,<br><em>mere Bhai 🫂💝</em></h2>
+  <img class="portrait" src="assets/portrait.jpg" alt="Birthday portrait">
+  <div class="letter">youm-e-wiladat bohot bohot Mubarak ho mere Bhai 🫂💝, Allah Kareem tujhe tamam jayaz khushiyo se nawazee, sehat de, tandurusti de 💪, sab jayaz murade puri karee, Allah ta'ala tujhe or deen ka ilm hasil karne ki tofik de or usse mere sath share karne ki tofik dee 😁</div>
+  <button class="primary next">Next memory →</button>
+</section>
+
+<section class="screen slide gift-slide" id="gift">
+  <div class="tag">A LITTLE SURPRISE FOR YOU</div><h2>Open your <em>gift</em> 🎁</h2>
+  <p class="lead">There's a birthday message waiting inside. Tap the gift to play it.</p>
+  <button class="giftbox" id="giftBtn" aria-label="Open birthday gift"><span class="gift-lid"></span><span class="gift-body">🎁</span><span class="gift-ribbon"></span></button>
+  <p class="small" id="giftStatus">Tap once to open your video surprise</p>
+  <div class="video-wrap hidden" id="videoWrap"><video id="giftVideo" controls playsinline webkit-playsinline preload="auto" crossorigin="anonymous"><source src="assets/gift-video.mp4" type="video/mp4">Your browser does not support MP4 video playback.</video><button class="secondary" id="videoContinue">Continue to memories →</button></div>
+  <button class="primary next" id="giftNext">Skip video →</button>
+</section>
+
+<section class="screen slide" id="bond">
+  <div class="tag">A NOTE FOR MY BROTHER</div><h2>Allah's beautiful gift <em>❤️</em></h2>
+  <img class="portrait formal" src="assets/formal-brothers.jpg" alt="Brothers together in formal suits">
+  <div class="letter">Allah ka behad shukr guzaar hu ki usne tere jesa ek dost mere hisse me diyaa he jisne har waqt mera saath diyaa he ✊. Or ye to har saal kehta hu ki tune mujhe bohot se cheeze sikhaai but ye fact hee allah hame hamesha saath rakhee or nazre badh se bachaae 🥹. Bhaiii..! Wo hadees to suna hogaaa abhi thoda yaad nhi he mujhee 😅 but apne language mee Allah se dua he ki allah jannat me bhi hame sathh rakhee 🫂🤌.</div>
+  <button class="primary next">One more memory →</button>
+</section>
+
+<section class="screen slide" id="turf">
+  <div class="tag">ONE OF OUR FAVOURITE MEMORIES</div><h2>Those turf days... <em>🏏</em></h2>
+  <img class="portrait turf" src="assets/turf-memory.jpg" alt="Brothers together at the cricket turf">
+  <div class="letter">Bhaiii...! ye movement bhi ek sab se best memorial mese ek he haa jisme puri class k sath turf me enjoy kiye thee Right 🫶🫂✊</div>
+  <button class="primary next">Final message →</button>
+</section>
+
+<section class="screen slide finale" id="final">
+  <div class="tag">FROM ALI HASAN, WITH LOVE</div><div class="trophy">🏆</div>
+  <h1>Happy Birthday,<br><em>Champion!</em></h1>
+  <div class="letter">Allah tujhe hamesha khush rakhe, sehat aur kamyabi ata kare, har nek aur jayaz khwahish poori kare. Hamari dosti aur bhai jaisa rishta hamesha mazboot rahe. Har naye saal mein aur khoobsurat yaadein banayein. Ameen 🤲❤️</div>
+  <p class="signature">— Ali Hasan</p><button class="secondary" id="replay">↻ Replay from beginning</button>
+</section>
+</main>
+<div class="slide-count" id="slideCount"></div>
+<script src="script.js"></script>
+</body></html>
